@@ -1,22 +1,14 @@
 import React from 'react';
 import s from './OwnPosts.module.scss';
+import Post from "./Post/Post";
 
 const OwnPosts = () => {
     return (
         <div>
-            <div>
-                posts
-                <div>
-                    new post
-                </div>
-                <div>
-                    post1
-                </div>
-                <div>
-                    post2
-                </div>
-            </div>
+            new post
+            <Post/>
         </div>
+
     );
 };
 
