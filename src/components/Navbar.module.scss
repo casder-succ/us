@@ -1,0 +1,21 @@
+.nav {
+  border: 2px solid rgba(128, 128, 128, 0.25);
+  border-radius: 6px;
+  padding: 25px;
+  height: 100%;
+  min-width: 150px;
+  background-color: #ffffff;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.item a {
+  color: #242e42;
+  text-decoration: none;
+}
+
+.item a:hover {
+  color: #1d76da;
+}

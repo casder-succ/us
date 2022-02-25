@@ -1,26 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 1.25;
+}
+
 .app-wrapper {
-    display: grid;
-    width: 80%;
-    margin: 0 auto;
-
-    grid-template-areas: "header header"
-                        "nav content";
-    grid-template-rows: 60px 1fr;
-    grid-template-columns: 2fr 10fr;
-}
-
-.header {
-    grid-area: header;
-    background: black;
-    color: wheat;
-}
-
-.nav {
-    grid-area: nav;
-    background: aqua;
+    background-color: #fafbfd;
 }
 
 .content {
-    grid-area: content;
-    border: 1px solid red;
+    display: flex;
+    column-gap: 25px;
+    padding-top: 50px;
+    min-width: calc(100vh - 90px);
+}
+
+.container {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
 }

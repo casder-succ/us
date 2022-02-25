@@ -1,22 +1,23 @@
 import React from 'react';
+import s from './Profile.module.scss';
 
 const Profile = () => {
     return (
-        <main className="content">
+        <main className={s.content}>
             <div>
                 ava + descr
             </div>
             <div>
                 posts
-                <div>
-                    new post
-                </div>
-                <div>
-                    post1
-                </div>
-                <div>
-                    post2
-                </div>
+            </div>
+            <div>
+                new post
+            </div>
+            <div>
+                post1
+            </div>
+            <div>
+                post2
             </div>
         </main>
     );
