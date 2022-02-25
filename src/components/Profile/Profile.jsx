@@ -1,5 +1,6 @@
 import React from 'react';
 import s from './Profile.module.scss';
+import Posts from "./Posts/Posts";
 
 const Profile = () => {
     return (
@@ -7,18 +8,7 @@ const Profile = () => {
             <div>
                 ava + descr
             </div>
-            <div>
-                posts
-            </div>
-            <div>
-                new post
-            </div>
-            <div>
-                post1
-            </div>
-            <div>
-                post2
-            </div>
+            <Posts/>
         </main>
     );
 };
