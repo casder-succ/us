@@ -1,11 +1,16 @@
 import React from 'react';
+import s from './Header.module.scss';
+
+console.log(s)
 
 const Header = () => {
     return (
-        <div className="header">
-            <h1 className="header_logo">
-                US
-            </h1>
+        <div className={s.header}>
+            <div className="container">
+                <h1 className={s.header_title}>
+                    US
+                </h1>
+            </div>
         </div>
     );
 };
