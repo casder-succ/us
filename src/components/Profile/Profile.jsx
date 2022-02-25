@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Profile.module.scss';
-import OwnPosts from "./Posts/OwnPosts";
+import OwnPosts from "./OwnPosts/OwnPosts";
 
 const Profile = () => {
     return (
