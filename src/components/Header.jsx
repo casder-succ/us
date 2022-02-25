@@ -3,15 +3,9 @@ import React from 'react';
 const Header = () => {
     return (
         <div className="header">
-            <div>
-                Home
-            </div>
-            <div>
-                News Feed
-            </div>
-            <div>
-                Messages
-            </div>
+            <h1 className="header_logo">
+                US
+            </h1>
         </div>
     );
 };
