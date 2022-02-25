@@ -1,6 +1,7 @@
 import React from 'react';
+import s from './OwnPosts.module.scss';
 
-const Posts = () => {
+const OwnPosts = () => {
     return (
         <div>
             <div>
@@ -19,4 +20,4 @@ const Posts = () => {
     );
 };
 
-export default Posts;
+export default OwnPosts;
