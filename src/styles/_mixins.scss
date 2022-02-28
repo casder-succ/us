@@ -1,4 +1,16 @@
+@import "variables";
+
 @mixin component_border($border, $radius) {
   border: $border;
   border-radius: $radius;
+}
+
+@mixin component() {
+  border: $border;
+  border-radius: $border_radius;
+  padding: $component_padding;
+  width: $component_w;
+  height: $component_h;
+  background-color: $component_back;
+  margin-bottom: 25px;
 }
