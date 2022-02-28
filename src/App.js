@@ -2,7 +2,7 @@ import './App.css';
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
-import Messages from "./components/Messages/Messages";
+import Dialogs from "./components/Messages/Dialogs";
 import {Routes, Route} from "react-router-dom";
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
                 <Navbar/>
                 <Routes>
                     <Route path="/profile" element={<Profile/>}/>
-                    <Route path="/messages" element={<Messages/>}/>
+                    <Route path="/messages" element={<Dialogs/>}/>
                 </Routes>
             </div>
 
