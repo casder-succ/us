@@ -1,0 +1,10 @@
+@import "./src/styles/mixins";
+
+.posts {
+  //@include component;
+  margin-top: 25px;
+}
+
+.new_post {
+  @include component
+}
