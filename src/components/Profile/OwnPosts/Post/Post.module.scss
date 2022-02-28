@@ -1,4 +1,8 @@
+@import "./src/styles/mixins";
+
 .post {
+
+  @include component;
 
   &_header {
     display: flex;
