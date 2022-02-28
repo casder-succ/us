@@ -3,8 +3,8 @@ import s from './ProfilInfo.module.scss';
 
 const ProfileInfo = () => {
     return (
-        <div>
-
+        <div className={s.info}>
+            ava + descr
         </div>
     );
 };

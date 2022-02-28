@@ -1,0 +1,6 @@
+@import "./src/styles/mixins";
+
+.info {
+  @include component;
+  flex-grow: 1;
+}
