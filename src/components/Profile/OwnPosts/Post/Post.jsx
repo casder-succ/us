@@ -1,7 +1,9 @@
 import React from 'react';
 import s from './Post.module.scss';
 
-const Post = () => {
+const Post = (props) => {
+    const message = props.message || 'Post';
+    const likes = props.likes || 0;
     return (
         <div className={s.post}>
             <div className={s.post_header}>
@@ -19,7 +21,11 @@ const Post = () => {
             </div>
 
             <div className={s.post_content}>
-                test
+                {message}
+            </div>
+
+            <div className="likes">
+                {likes}
             </div>
         </div>
     );

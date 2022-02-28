@@ -6,7 +6,8 @@ const OwnPosts = () => {
     return (
         <div>
             new post
-            <Post/>
+            <Post message = 'Hello' likes='123'/>
+            <Post message = 'Hi guys no to war' likes='20'/>
         </div>
 
     );
