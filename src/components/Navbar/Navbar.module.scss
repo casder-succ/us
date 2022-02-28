@@ -18,5 +18,29 @@
 }
 
 .item a:hover {
-  color: #1d76da;
+  position: relative;
+}
+
+.item a:hover::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: #242e42;
+  position: absolute;
+  top: 8px;
+  left: -10px;
+}
+
+.item .active {
+  position: relative;
+}
+
+.item .active::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: #242e42;
+  position: absolute;
+  top: 8px;
+  left: -10px;
 }
