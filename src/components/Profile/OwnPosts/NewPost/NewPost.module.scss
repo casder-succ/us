@@ -1,0 +1,11 @@
+@import "./src/styles/mixins";
+
+.new_post {
+  @include component;
+}
+
+textarea {
+  width: 100%;
+  height: 70px;
+  resize: none;
+}

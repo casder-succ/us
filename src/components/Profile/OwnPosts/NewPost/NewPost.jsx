@@ -3,8 +3,9 @@ import s from './NewPost.module.scss';
 
 const NewPost = () => {
     return (
-        <div>
-
+        <div className={s.new_post}>
+            <textarea/>
+            <button>Publish</button>
         </div>
     );
 };
