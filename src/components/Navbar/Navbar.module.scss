@@ -1,11 +1,8 @@
+@import "./src/styles/mixins";
+
 .nav {
-  border: 2px solid rgba(128, 128, 128, 0.25);
-  border-radius: 6px;
-  padding: 25px;
-  height: 100%;
-  width: 100%;
+  @include component;
   max-width: 200px;
-  background-color: #ffffff;
 }
 
 .item:not(:last-child) {
