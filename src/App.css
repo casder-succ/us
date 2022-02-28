@@ -4,6 +4,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    color: #000;
 }
 
 body {
@@ -25,7 +27,7 @@ body {
 }
 
 .container {
-    width: 80%;
+    max-width: 70%;
     height: 100%;
     margin: 0 auto;
 }
