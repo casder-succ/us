@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     font-style: normal;
     line-height: 1.25;
 }
@@ -28,4 +28,8 @@ body {
     width: 80%;
     height: 100%;
     margin: 0 auto;
+}
+
+.active {
+    color: red;
 }
