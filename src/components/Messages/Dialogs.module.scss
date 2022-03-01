@@ -2,16 +2,7 @@
 
 .dialogs {
   @include component;
-}
-
-.item {
-  margin-bottom: 10px;
-}
-
-.item a:hover {
-  color: #1d76da;
-}
-
-.messages {
-
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  grid-column-gap: 20px;
 }
