@@ -1,0 +1,17 @@
+@import "./src/styles/mixins";
+
+.dialogs {
+  @include component;
+}
+
+.item {
+  margin-bottom: 10px;
+}
+
+.item a:hover {
+  color: #1d76da;
+}
+
+.messages {
+
+}
