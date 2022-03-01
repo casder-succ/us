@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './Messages.module.scss';
+import s from './DialogItem.module.scss';
 import {NavLink} from "react-router-dom";
 
 const DialogItem = (props) => {

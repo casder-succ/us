@@ -1,10 +1,10 @@
 import React from 'react';
-import s from '../Messages.module.scss';
+import s from './Message.module.scss';
 
-const Message = () => {
+const Message = (props) => {
     return (
-        <div>
-
+        <div className={s.item}>
+            {props.message}
         </div>
     );
 };
