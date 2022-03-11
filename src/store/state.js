@@ -22,5 +22,12 @@ export const state = {
             {name: "Artyom", id: "5"},
             {name: "Vlad", id: "6"},
         ],
+    },
+    Sidebar: {
+        links: [
+            {to: "/profile", name: "Profile"},
+            {to: "/messages", name: "Messages"},
+            {to: "/feed", name: "feed"},
+        ]
     }
 }

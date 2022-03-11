@@ -10,7 +10,7 @@ const App = (props) => {
         <div className="app-wrapper">
             <Header/>
             <div className="content container">
-                <Navbar/>
+                <Navbar state={props.state}/>
                 <Routes>
                     <Route path="/profile" element={ <Profile
                         state={props.state.ProfilePage}/> }/>
