@@ -1,11 +1,11 @@
 import React from 'react';
 import s from './NewPost.module.scss';
 
-const NewPost = () => {
+const NewPost = (props) => {
     return (
         <div className={s.new_post}>
-            <textarea/>
-            <button>Publish</button>
+            <textarea onChange={(event) => props.onChange(event.target.value)} value={props.newPostValue}/>
+            <button onClick={() => props.addPost(props.newPostValue)}>Publish</button>
         </div>
     );
 };

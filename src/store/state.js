@@ -1,12 +1,15 @@
+let rerender = () => {
+    console.log('this could be rerender');
+};
 
-
-export const state = {
+const state = {
     ProfilePage: {
         posts: [
             {message: "hello", likes: 123},
             {message: "Hi guys no to war", likes: 20},
             {message: "was sup niga", likes: 23},
-        ]
+        ],
+        newPostField: '',
     },
     DialogsPage: {
         messages: [
@@ -28,6 +31,29 @@ export const state = {
             {to: "/profile", name: "Profile"},
             {to: "/messages", name: "Messages"},
             {to: "/feed", name: "feed"},
-        ]
+        ],
     }
-}
+};
+
+export const addPost = (postText) => {
+    const post = {
+        id: state.ProfilePage.posts.length,
+        message: postText,
+        likes: 0,
+    };
+
+    state.ProfilePage.posts.push(post);
+    state.ProfilePage.newPostField = '';
+    rerender(state);
+};
+
+export const updateNewPostValue = (newText) => {
+    state.ProfilePage.newPostField = newText;
+    rerender(state);
+};
+
+export const subscribe = (observer) => {
+    rerender = observer;
+};
+
+export {state};
