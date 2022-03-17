@@ -4,22 +4,26 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
-import {state, updateNewPostValue, addPost, subscribe} from './store/state';
+import {store} from "./store/state";
 
 const renderContent = (state) => {
     ReactDOM.render(
         <React.StrictMode>
             <BrowserRouter>
-                <App state={state} updateNewPostValue={updateNewPostValue} addPost={addPost}/>
+                <App
+                    state={state}
+                    addPost={store.addPost.bind(store)}
+                    updateNewPostValue={store.updateNewPostValue.bind(store)}
+                />
             </BrowserRouter>
         </React.StrictMode>,
         document.getElementById('root')
     );
 }
 
-renderContent(state);
+renderContent(store.getState());
 
-subscribe(renderContent);
+store.subscribe(renderContent);
 
 
 reportWebVitals();
