@@ -1,3 +1,6 @@
+const ADD_POST = "ADD_POST";
+const UPDATE_NEW_POST_VALUE = "UPDATE_NEW_POST_VALUE";
+
 export const store = {
     _state: {
         ProfilePage: {
@@ -44,31 +47,19 @@ export const store = {
         return this._state;
     },
 
-
-
-    addPost(postText) {
-
-    },
-
-    updateNewPostValue(newText) {
-
-        this._callListener(this._state);
-    },
-
-
     dispatch(action) {
         switch (action.type) {
-            case "ADD_POST":
+            case ADD_POST:
                 const post = {
                     id: this._state.ProfilePage.posts.length,
-                    message: action.payload.postText,
+                    message: this._state.ProfilePage.newPostField,
                     likes: 0,
                 };
 
                 this._state.ProfilePage.posts.push(post);
                 this._state.ProfilePage.newPostField = '';
                 break;
-            case "UPDATE_NEW_POST_VALUE":
+            case UPDATE_NEW_POST_VALUE:
                 this._state.ProfilePage.newPostField = action.payload.newPostText;
                 break;
         }
@@ -77,3 +68,13 @@ export const store = {
     }
 
 };
+
+export const addPostActionCreator = () => ({type: ADD_POST});
+export const updateNewPostValueActionCreator = (text) => (
+    {
+        type: UPDATE_NEW_POST_VALUE,
+        payload: {
+            newPostText: text,
+        }
+    }
+)
