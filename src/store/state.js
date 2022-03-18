@@ -32,32 +32,48 @@ export const store = {
         }
     },
 
-    addPost(postText) {
-        const post = {
-            id: this._state.ProfilePage.posts.length,
-            message: postText,
-            likes: 0,
-        };
-
-        this._state.ProfilePage.posts.push(post);
-        this._state.ProfilePage.newPostField = '';
-        this._callListener(this._state);
-    },
-
-    updateNewPostValue(newText) {
-        this._state.ProfilePage.newPostField = newText;
-        this._callListener(this._state);
+    _callListener() {
+        console.log('this could be rerender');
     },
 
     subscribe(observer) {
         this._callListener = observer;
     },
 
-    _callListener() {
-        console.log('this could be rerender');
-    },
-
     getState() {
         return this._state;
+    },
+
+
+
+    addPost(postText) {
+
+    },
+
+    updateNewPostValue(newText) {
+
+        this._callListener(this._state);
+    },
+
+
+    dispatch(action) {
+        switch (action.type) {
+            case "ADD_POST":
+                const post = {
+                    id: this._state.ProfilePage.posts.length,
+                    message: action.payload.postText,
+                    likes: 0,
+                };
+
+                this._state.ProfilePage.posts.push(post);
+                this._state.ProfilePage.newPostField = '';
+                break;
+            case "UPDATE_NEW_POST_VALUE":
+                this._state.ProfilePage.newPostField = action.payload.newPostText;
+                break;
+        }
+
+        this._callListener(this.getState());
     }
+
 };
