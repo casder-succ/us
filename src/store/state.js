@@ -1,5 +1,8 @@
 const ADD_POST = "ADD_POST";
+const SEND_MESSAGE = "SEND_MESSAGE";
+
 const UPDATE_NEW_POST_VALUE = "UPDATE_NEW_POST_VALUE";
+const UPDATE_NEW_MESSAGE_TEXT = "UPDATE_NEW_MESSAGE_TEXT";
 
 export const store = {
     _state: {
@@ -25,6 +28,7 @@ export const store = {
                 {name: "Artyom", id: "5"},
                 {name: "Vlad", id: "6"},
             ],
+            newMessageText: '',
         },
         Sidebar: {
             links: [
@@ -62,6 +66,13 @@ export const store = {
             case UPDATE_NEW_POST_VALUE:
                 this._state.ProfilePage.newPostField = action.payload.newPostText;
                 break;
+            case UPDATE_NEW_MESSAGE_TEXT:
+                this._state.DialogsPage.newMessageText = action.payload.newMessageText;
+                break;
+            case SEND_MESSAGE:
+                const message = this._state.DialogsPage.newMessageText;
+                this._state.DialogsPage.newMessageText = '';
+                this._state.DialogsPage.messages[this._state.DialogsPage.messages.length] = {id: 6, message};
         }
 
         this._callListener(this.getState());
@@ -70,11 +81,6 @@ export const store = {
 };
 
 export const addPostActionCreator = () => ({type: ADD_POST});
-export const updateNewPostValueActionCreator = (text) => (
-    {
-        type: UPDATE_NEW_POST_VALUE,
-        payload: {
-            newPostText: text,
-        }
-    }
-)
+export const updateNewPostValueActionCreator = (text) => ({type: UPDATE_NEW_POST_VALUE, payload: {newPostText: text}})
+export const sendMessageActionCreator = () => ({type: SEND_MESSAGE});
+export const updateNewMessageTextActionCreator = (text) => ({type: UPDATE_NEW_MESSAGE_TEXT, payload: {newMessageText: text,}})
