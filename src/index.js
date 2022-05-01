@@ -17,7 +17,7 @@ const renderContent = (state) => {
         </React.StrictMode>,
         document.getElementById('root')
     );
-}
+};
 
 renderContent(store.getState());
 

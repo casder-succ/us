@@ -1,22 +1,11 @@
 @import "./src/styles/mixins";
 
 .post {
-
   @include component;
 
   &_header {
     display: flex;
-    justify-content: start;
     align-items: center;
-
-    &Info {
-      flex-grow: 1;
-
-    }
-  }
-
-  &_content {
-
   }
 
   &_imgContainer {
@@ -24,8 +13,6 @@
     margin-right: 15px;
     width: 50px;
     height: 50px;
-    align-items: start;
-    justify-content: start;
   }
 
   &_img {
@@ -36,10 +23,6 @@
 
   &_author {
     font-size: 18px;
-  }
-
-  &_time {
-
   }
 }
 
