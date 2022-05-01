@@ -2,7 +2,7 @@ import React from 'react';
 import s from './Dialogs.module.scss'
 import DialogItem from "./DialodItem/DialogItem";
 import Message from "./Message/Message";
-import {sendMessageActionCreator, updateNewMessageTextActionCreator} from "../../store/state";
+import {sendMessageActionCreator, updateNewMessageTextActionCreator} from "../../store/dialogsReducer";
 
 const Dialogs = (props) => {
     const onSend = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './NewPost.module.scss';
-import {addPostActionCreator, updateNewPostValueActionCreator} from "../../../../store/state";
+import {addPostActionCreator, updateNewPostValueActionCreator} from "../../../../store/profileReducer";
 
 const NewPost = (props) => {
     const onChange = (newText) => {
