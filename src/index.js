@@ -2,9 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
-import {store} from "./store/store";
+import {store} from "./store/reduxStore";
 
 const renderContent = (state) => {
     ReactDOM.render(
@@ -22,7 +21,7 @@ const renderContent = (state) => {
 
 renderContent(store.getState());
 
-store.subscribe(renderContent);
-
-
-reportWebVitals();
+store.subscribe(() => {
+    const state = store.getState();
+    renderContent(state);
+});

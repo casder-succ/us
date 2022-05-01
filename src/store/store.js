@@ -4,37 +4,7 @@ import navigationReducer from "./navigationReducer";
 
 export const store = {
     _state: {
-        ProfilePage: {
-            posts: [
-                {message: "hello", likes: 123},
-                {message: "Hi guys no to war", likes: 20},
-                {message: "was sup niga", likes: 23},
-            ],
-            newPostField: '',
-        },
-        DialogsPage: {
-            messages: [
-                {message: "hi"},
-                {message: "how are you"},
-                {message: "hello"},
-            ],
-            dialogs: [
-                {name: "Kirill", id: "1"},
-                {name: "Dima", id: "2"},
-                {name: "Ksusha", id: "3"},
-                {name: "Misha", id: "4"},
-                {name: "Artyom", id: "5"},
-                {name: "Vlad", id: "6"},
-            ],
-            newMessageText: '',
-        },
-        Navigation: {
-            links: [
-                {to: "/profile", name: "Profile"},
-                {to: "/messages", name: "Messages"},
-                {to: "/feed", name: "feed"},
-            ],
-        }
+
     },
 
     _callListener() {
