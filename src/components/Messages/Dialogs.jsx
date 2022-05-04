@@ -7,12 +7,11 @@ const Dialogs = ({onSend, onMessageTextUpdate, dialogs, messages, newMessageText
     return (
         <div className={s.dialogs}>
             <div>
-                {
-                    dialogs
-                        .map(el => (
-                            <DialogItem name={el.name} id={el.id} key={el.id}/>
-                        ))
-                }
+                {dialogs.map(
+                    el => (
+                        <DialogItem name={el.name} id={el.id} key={el.id}/>
+                    )
+                )}
             </div>
             <div>
                 <div>
@@ -20,10 +19,12 @@ const Dialogs = ({onSend, onMessageTextUpdate, dialogs, messages, newMessageText
                 </div>
                 <div>
                     <textarea
-                        onChange={(e) => onMessageTextUpdate(e.target.value)}
                         value={newMessageText}
+                        id="" cols="30" rows="10"
                         placeholder="Enter your message.."
-                        id="" cols="30" rows="10"/>
+                        onChange={(e) => onMessageTextUpdate(e.target.value)}
+
+                    />
                 </div>
                 <div>
                     <button onClick={onSend}>Send</button>

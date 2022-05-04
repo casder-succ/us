@@ -6,7 +6,7 @@ export const store = {
     _state: {
 
     },
-
+    
     _callListener() {
         console.log('this could be rerender');
     },
