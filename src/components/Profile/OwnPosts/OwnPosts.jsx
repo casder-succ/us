@@ -3,16 +3,21 @@ import s from './OwnPosts.module.scss';
 import Post from "./Post/Post";
 import NewPost from "./NewPost/NewPost";
 
-const OwnPosts = (props) => {
+const OwnPosts = ({onSubmit, onChange, posts, newPostField}) => {
     return (
         <div className={s.posts}>
             <NewPost
-                dispatch={props.dispatch}
-                newPostValue={props.state.newPostField}/>
-            {props.state.posts
-                .map((el, i) =>
-                    <Post message={el.message} likes={el.likes} key={i}/>
-                )}
+                onChange={onChange}
+                onSubmit={onSubmit}
+                newPostValue={newPostField}
+            />
+
+            {
+                posts
+                    .map((el, i) => (
+                        <Post message={el.message} likes={el.likes} key={i}/>
+                    ))
+            }
         </div>
 
     );
