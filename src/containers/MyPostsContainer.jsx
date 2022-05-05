@@ -1,26 +1,24 @@
-import React from 'react';
 import OwnPosts from "../components/Profile/OwnPosts/OwnPosts";
 import {addPostActionCreator, updateNewPostValueActionCreator} from "../store/profileReducer";
+import {connect} from "react-redux";
 
-const MyPostsContainer = ({ store }) => {
-    const state = store.getState();
-
-    const onChange = (newText) => {
-        store.dispatch(updateNewPostValueActionCreator(newText));
+const mapStateToProps = (state) => {
+    return {
+        posts: state.ProfilePage.posts,
+        newPostField: state.ProfilePage.newPostField,
     };
-
-    const onSubmit = () => {
-        store.dispatch(addPostActionCreator());
-    };
-
-    return (
-        <OwnPosts
-            onChange={onChange}
-            onSubmit={onSubmit}
-            posts={state.ProfilePage.posts}
-            newPostField={state.ProfilePage.newPostField}
-        />
-    );
 };
 
-export default MyPostsContainer;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onChange: (newText) => {
+            dispatch(updateNewPostValueActionCreator(newText));
+        },
+
+        onSubmit: () => {
+            dispatch(addPostActionCreator());
+        }
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(OwnPosts);

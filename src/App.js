@@ -5,23 +5,23 @@ import Profile from "./components/Profile/Profile";
 import {Routes, Route} from "react-router-dom";
 import DialogsContainer from "./containers/DialogsContainer";
 
-const App = ({store}) => {
-    const state = store.getState();
+const App = () => {
 
     return (
         <div className="app-wrapper">
             <Header/>
             <div className="content container">
-                <Navbar links={state.Navigation.links}/>
+                <Navbar/>
                 <Routes>
-                    <Route path="/profile" element={
-                        <Profile
-                            store={store}
-                        />}/>
-                    <Route path="/messages" element={
-                        <DialogsContainer
-                            store={store}
-                        />}/>
+                    <Route
+                        path="/profile"
+                        element={<Profile/>}
+                    />
+
+                    <Route
+                        path="/messages"
+                        element={<DialogsContainer/>}
+                    />
                 </Routes>
             </div>
         </div>

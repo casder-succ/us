@@ -1,6 +1,13 @@
 import React from 'react';
 import s from './Navbar.module.scss';
 import {NavLink} from "react-router-dom";
+import {connect} from "react-redux";
+
+const mapStateToProps = (state) => {
+    return {
+        links: state.Navigation.links,
+    };
+};
 
 const Navbar = ({links}) => {
     return (
@@ -17,4 +24,4 @@ const Navbar = ({links}) => {
     );
 };
 
-export default Navbar;
+export default connect(mapStateToProps)(Navbar);

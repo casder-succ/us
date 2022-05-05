@@ -19,18 +19,22 @@ const profileReducer = (state = initialState, action) => {
                 likes: 0,
             };
 
-            state.posts.push(post);
-            state.newPostField = '';
-            break;
+            return {
+                ...state,
+                posts: [
+                    ...state.posts,
+                    post,
+                ],
+                newPostField: ''
+            };
         case UPDATE_NEW_POST_VALUE:
-            state.newPostField = action.payload.newPostText;
-            break;
+            return {
+                ...state,
+                newPostField: action.payload.newPostField
+            };
         default:
-            break;
+            return state;
     }
-
-
-    return state;
 };
 
 export default profileReducer;

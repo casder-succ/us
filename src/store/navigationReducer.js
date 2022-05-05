@@ -7,7 +7,6 @@ const initialState = {
 };
 
 const navigationReducer = (state = initialState, action) => {
-
     return state;
 };
 
